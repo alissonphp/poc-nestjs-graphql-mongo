@@ -1,0 +1,20 @@
+type Query {
+    bots: [Bot]
+}
+
+type Mutation {
+    createBot(createBotInput: CreateBotInput): Bot
+}
+
+type Bot {
+    id: Int
+    name: String
+    token: String
+    url: String
+}
+
+input CreateBotInput {
+    name: String!
+    token: String!
+    url: String!
+}
