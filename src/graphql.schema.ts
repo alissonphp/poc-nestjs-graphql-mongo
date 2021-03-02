@@ -21,8 +21,8 @@ export abstract class IMutation {
 }
 
 export class Bot {
-    id?: number;
-    name?: string;
-    token?: string;
-    url?: string;
+    _id?: string;
+    name: string;
+    token: string;
+    url: string;
 }
