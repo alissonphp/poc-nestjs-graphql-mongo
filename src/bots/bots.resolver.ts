@@ -8,7 +8,7 @@ export class BotsResolver {
     constructor(private readonly botsService: BotsService) {}
 
     @Query('bots')
-    async getBots() {
+    async getBots(): Promise<Bot[]> {
         return this.botsService.findAll();
     }
 

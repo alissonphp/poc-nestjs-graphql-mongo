@@ -7,10 +7,10 @@ type Mutation {
 }
 
 type Bot {
-    id: Int
-    name: String
-    token: String
-    url: String
+    _id: String
+    name: String!
+    token: String!
+    url: String!
 }
 
 input CreateBotInput {
