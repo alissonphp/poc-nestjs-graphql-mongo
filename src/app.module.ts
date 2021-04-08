@@ -13,7 +13,7 @@ import { BotsModule } from './bots/bots.module';
       installSubscriptionHandlers: true,
     }),
     ConfigModule.forRoot(),
-    MongooseModule.forRoot('mongodb://localhost:27017/blackbot', {useNewUrlParser: true}),
+    MongooseModule.forRoot(`mongodb://${process.env.MONGODB_HOST}:${process.env.MONGO_PORT}/${process.env.MONGODB_DB}`, {useNewUrlParser: true}),
     BotsModule
   ],
   controllers: [AppController],
